@@ -34,5 +34,9 @@ dbConnect();
 ///Load Routes
 app.use("/", userRoutes);
 
+app.get("/", (req, res) => {
+  return res.json({ message: "Welcome!" });
+});
+
 //Start server
 app.listen(port, () => console.log(`App listening on port ${port}!`));
